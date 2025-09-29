@@ -1,11 +1,19 @@
-# PROCUREMENT DASHBOARD (PYTHON + PLOTLY)
+# Procurement Dashboard (Python + Plotly)
 
 Generates an interactive procurement KPI dashboard as a single HTML file using synthetic example data. Visualizes cost of material, cost of avoidance, total savings, monthly savings by department, and procurement ROI with a simple forecast.
 
-Tech:
-Python 3.10+; NumPy, Pandas, Plotly
+**Tech:** Python 3.10+, NumPy, Pandas, Plotly
 
-Quickstart:
+## Screenshot
+A preview of the generated dashboard (synthetic data):
+
+![Procurement Dashboard preview](assets/dashboard.png)
+
+After running the steps below, the full interactive HTML will be created at `outputs/dashboard.html` and can be opened in your browser.
+
+## Quickstart
+
+```bash
 # 1) Create and activate a virtual environment
 python3 -m venv .venv && source .venv/bin/activate
 python -m pip install --upgrade pip
@@ -21,6 +29,7 @@ python scripts/viz.py
 
 # 5) Open in your browser (macOS)
 open outputs/dashboard.html
+
 
 Project structure:
 scripts/
