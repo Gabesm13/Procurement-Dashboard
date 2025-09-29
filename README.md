@@ -1,39 +1,38 @@
 # PROCUREMENT DASHBOARD (PYTHON + PLOTLY)
 
-A small, self-contained project that generates an interactive Procurement KPI dashboard as a single HTML file.
-It uses synthetic example data to visualize: cost of material, cost of avoidance, total savings, monthly savings by department,
-and procurement ROI with a simple forecast.
+Generates an interactive procurement KPI dashboard as a single HTML file using synthetic example data. Visualizes cost of material, cost of avoidance, total savings, monthly savings by department, and procurement ROI with a simple forecast.
 
 Tech:
 Python 3.10+; NumPy, Pandas, Plotly
 
 Quickstart:
-**Create and activate a virtual environment**
-
+# 1) Create and activate a virtual environment
 python3 -m venv .venv && source .venv/bin/activate
+python -m pip install --upgrade pip
 
-**install dependencies**
+# 2) Install dependencies
+pip install -r requirements.txt
 
-pip install numpy pandas plotly
-
-## 1) generate synthetic data -> data/
+# 3) Generate synthetic data -> data/
 python scripts/data_gen.py --seed 42
 
-## 2) build the dashboard -> outputs/dashboard.html
+# 4) Build the dashboard -> outputs/dashboard.html
 python scripts/viz.py
 
-## open the result in your browser
+# 5) Open in your browser (macOS)
 open outputs/dashboard.html
 
 Project structure:
-scripts/data_gen.py   - creates JSON/CSV inputs
-scripts/viz.py        - builds the HTML dashboard
-data/                 - generated data files
-outputs/              - generated dashboard.html
+scripts/
+  data_gen.py      # creates JSON/CSV inputs in /data
+  viz.py           # builds the HTML dashboard in /outputs
+data/              # generated data files (JSON/CSV)
+outputs/           # generated dashboard.html
+requirements.txt   # dependencies
+README.md          # this file
 
 Notes:
 All numbers are synthetic and for demonstration only.
-Feel free to adapt the code and data schema for real datasets.
 
 License:
 MIT
